@@ -1,7 +1,11 @@
 # docker-compose-kafka-spring-angular-mongodb
 Proof of Concept with Kafka, Producer, Consumer, App, Mongo Services
 
-### Comands
+### Deploy
+Open Gitbash and execute this
+bash deploy.sh
+
+### Dockers Commands
 
 #### Stand Up
 docker-compose up --build -d
