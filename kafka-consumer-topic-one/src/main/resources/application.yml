@@ -1,0 +1,19 @@
+server:
+  port: 8081
+
+kafka:
+  bootstrapAddress: 192.168.1.40:9092
+  topicOne: topic-A
+  groupId: group-1
+
+spring:
+  data:
+    mongodb:
+      ## my local ip or docker ip
+      host: 192.168.1.40
+      port: 27017
+      database: my-db
+      ## with security
+      #username: admin
+      #password: secure
+      #authentication-database: admin
