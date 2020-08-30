@@ -15,4 +15,7 @@ docker ps -a -n4
 #### Show logs of a specific container
 docker logs -f <id_container>
 
+#### Show ip of specific container
+docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' bad1fbcee7d4
+
 
