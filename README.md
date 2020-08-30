@@ -2,7 +2,7 @@
 Proof of Concept with Kafka, Producer, Consumer, App, Mongo Services
 
 ### Deploy
-Open Gitbash and execute this
+#### Open Gitbash and execute this
 bash deploy.sh
 
 ### Dockers Commands
