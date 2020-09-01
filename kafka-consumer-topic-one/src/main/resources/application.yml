@@ -2,14 +2,14 @@ server:
   port: 8081
 
 kafka:
-  bootstrapAddress: 192.168.1.40:9092
+  bootstrapAddress: ${MY_IP}:9092
   topicOne: topicA
   groupId: group1
 
 spring:
   data:
     mongodb:
-      host: 192.168.1.40
+      host: ${MY_IP}
       port: 27017
       database: my-db
       username: root

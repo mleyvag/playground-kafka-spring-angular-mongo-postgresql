@@ -13,7 +13,7 @@ services:
     ports:
       - 9092:9092
     environment:
-      KAFKA_ADVERTISED_HOST_NAME: 192.168.1.40
+      KAFKA_ADVERTISED_HOST_NAME: ${MY_IP}
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
@@ -34,6 +34,8 @@ services:
     build:
       context: kafka-producer
     container_name: producer
+    environment:
+      MY_IP: ${MY_IP}
     ports:
       - 8080:8080
     depends_on:
@@ -42,6 +44,8 @@ services:
     build:
       context: kafka-consumer-topic-one
     container_name: consumer_topic_one
+    environment:
+      MY_IP: ${MY_IP}
     ports:
      - 8081:8081
     depends_on:
@@ -51,6 +55,8 @@ services:
     build:
       context: kafka-consumer-topic-two
     container_name: consumer_topic_two
+    environment:
+      MY_IP: ${MY_IP}
     ports:
      - 8082:8082
     depends_on:
