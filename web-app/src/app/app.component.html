@@ -1,0 +1,14 @@
+<h1>{{title}} </h1>
+<div>
+    <label>Message:
+        <input [(ngModel)]="message" placeholder="Text your message"/>
+    </label>
+
+    <button (click)="sendTopicOne()">Send Message Topic#1</button>
+
+    <button (click)="sendTopicTwo()">Send Message Topic#2</button>
+</div>
+
+<div>
+    <h3>{{output}}</h3>
+</div>
