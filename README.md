@@ -21,3 +21,6 @@ docker logs -f <id_container>
 
 #### Show ip of specific container
 docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' <container_id_or_name>
+
+#### Stats all services
+docker stats --format "table {{.Container}}\t{{.CPUPerc}}\t{{.MemUsage}}" consumer_topic_one consumer_topic_two producer kafka zookeeper mongo
