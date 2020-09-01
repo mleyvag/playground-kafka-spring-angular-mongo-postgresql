@@ -3,7 +3,7 @@ Proof of Concept with Kafka, Producer, Consumer, App, Mongo Services
 
 ### Deploy
 #### Open Gitbash and execute this
-bash deploy.sh
+sh deploy.sh
 
 ### Dockers Commands
 
@@ -11,7 +11,7 @@ bash deploy.sh
 docker-compose up --build -d
 
 #### Down Services
-docker-compose stop
+docker-compose down
 
 #### Show All Containers
 docker ps -a -n4
