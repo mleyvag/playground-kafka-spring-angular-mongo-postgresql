@@ -22,11 +22,6 @@ public class KafkaTopicConfig {
     @Value(value = "${kafka.topicTwo}")
     private String topicTwo;
 
-    @Value(value = "${kafka.topicOne.partitions}")
-    private int topicOnePartitions;
-
-    @Value(value = "${kafka.topicOne.partitions}")
-    private int topicTwoPartitions;
 
     @Bean
     public KafkaAdmin kafkaAdmin() {
@@ -37,11 +32,11 @@ public class KafkaTopicConfig {
 
     @Bean
     public NewTopic topicOne() {
-        return new NewTopic(topicOne, topicOnePartitions, (short) 1);
+        return new NewTopic(topicOne, 1, (short) 1);
     }
 
     @Bean
     public NewTopic topicTwo() {
-        return new NewTopic(topicTwo, topicTwoPartitions, (short) 1);
+        return new NewTopic(topicTwo, 1, (short) 1);
     }
 }
