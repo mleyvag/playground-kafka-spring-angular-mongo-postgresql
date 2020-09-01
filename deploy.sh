@@ -1,5 +1,5 @@
 #!bin/sh
-export MY_IP=192.168.1.40
+#export MY_IP=192.168.1.40
 cd kafka-producer && \
 mvn clean package && cd .. && \
 cd kafka-consumer-topic-one && \
