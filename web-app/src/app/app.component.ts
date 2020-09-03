@@ -33,7 +33,15 @@ export class AppComponent {
 
   sendTopicTwo() {
     console.log("sendTopicTwo");
-    this.messageService.sendMessage(this.message, "topic2");
+    this.messageService.sendMessage(this.message, "topic2").subscribe(
+      (data) => {
+        console.info(data);
+        this.output = data['status'];
+      },
+      (error) => {
+        console.error(error)
+      }
+    );
   }
 
 }
