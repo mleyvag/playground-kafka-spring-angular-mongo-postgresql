@@ -29,7 +29,7 @@ public class KafkaProducerController {
     }
 
     @GetMapping("/send/topic2/{msg}")
-    public String sendToTopicTwo(@PathVariable final String msg) {
+    public ResponseEntity<Response> sendToTopicTwo(@PathVariable final String msg) {
         kafkaProducerService.sendMessage(msg, topicTwo);
         return ResponseEntity.ok(new Response("message was sended to topicTwo!"));
     }
