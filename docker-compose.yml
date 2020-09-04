@@ -6,9 +6,7 @@ services:
     ports:
       - 2181:2181
   kafka:
-    build:
-      context: kafka-docker-master
-      dockerfile: Dockerfile
+    image: wurstmeister/kafka
     container_name: kafka
     ports:
       - 9092:9092
