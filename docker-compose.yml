@@ -59,3 +59,11 @@ services:
      - 8082:8082
     depends_on:
      - producer
+  web-app:
+    build:
+      context: web-app
+    container_name: web-app
+    ports:
+     - 80:80
+    depends_on:
+     - producer

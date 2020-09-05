@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
+import { environment } from '../../environments/environment';
 
 
 @Injectable({
@@ -9,7 +10,7 @@ import { catchError, map, tap } from 'rxjs/operators';
 })
 export class MessageService {
 
-  private heroesUrl = 'http://localhost:8080/send/';  // URL to web api
+  private heroesUrl = environment.apiUrl;  // URL to web api
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
