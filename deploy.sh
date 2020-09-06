@@ -8,5 +8,4 @@ cd kafka-consumer-topic-two && \
 mvn clean package && cd .. && \
 docker-compose down && \
 docker-compose up --build -d && \
-docker ps -an6 && \
-docker logs -f consumer_topic_one
+docker ps -an8

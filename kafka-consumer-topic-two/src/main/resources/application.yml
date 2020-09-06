@@ -1,0 +1,14 @@
+kafka:
+  bootstrapAddress: ${MY_IP}:9092
+  topicTwo: topicB
+  groupId: group2
+server:
+  port: 8082
+spring:
+  datasource:
+    url: jdbc:postgresql://postgresql:5432/postgresql-mydb
+    username: userapp
+    password: 12345
+  jpa:
+    hibernate:
+      ddl-auto: create

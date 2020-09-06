@@ -49,6 +49,16 @@ services:
     depends_on:
      - producer
      - mongo
+  postgresql:
+    image: postgres
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: userapp
+      POSTGRES_PASSWORD: 12345
+      POSTGRES_DB: postgresql-mydb
+    volumes:
+      - /etc/mysql/conf.d:/etc/mysql/conf.d
   consumer_topic_two:
     build:
       context: kafka-consumer-topic-two
@@ -59,6 +69,7 @@ services:
      - 8082:8082
     depends_on:
      - producer
+     - postgresql
   web-app:
     build:
       context: web-app
