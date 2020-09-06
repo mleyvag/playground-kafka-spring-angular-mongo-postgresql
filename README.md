@@ -1,5 +1,10 @@
-# docker-compose-kafka-spring-angular-mongodb
-Proof of Concept with Kafka, Producer, Consumer, App, Mongo Services
+# playground-kafka-spring-angular-mongo-postgresql
+Proof of Concept
+- Kafka
+- Spring Boot
+- MongoDB
+- Postgresql
+- Angular
 
 ### Deploy
 #### Open Gitbash and execute this
