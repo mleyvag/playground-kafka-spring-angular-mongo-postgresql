@@ -20,7 +20,7 @@ export class AppComponent {
 
   sendTopicOne() {
     console.log("sendTopicOne");
-    this.messageService.sendMessage(this.message, "topic1").subscribe(
+    this.messageService.sendMessageToTopicOne(this.message).subscribe(
       (data) => {
         console.info(data);
         this.output = data['status'];
@@ -33,7 +33,7 @@ export class AppComponent {
 
   sendTopicTwo() {
     console.log("sendTopicTwo");
-    this.messageService.sendMessage(this.message, "topic2").subscribe(
+    this.messageService.sendMessageToTopicTwo(this.message).subscribe(
       (data) => {
         console.info(data);
         this.output = data['status'];

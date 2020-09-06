@@ -11,4 +11,6 @@ RUN ng build --prod
 
 FROM nginx:1.17-alpine
 
+COPY ./nginx.conf /etc/nginx/nginx.conf
 COPY --from=builder /opt/web/dist/web-app /usr/share/nginx/html
+CMD ["nginx", "-g", "daemon off;"]
